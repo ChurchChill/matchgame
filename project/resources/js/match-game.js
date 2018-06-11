@@ -14,8 +14,10 @@ MatchGame.generateCardValues = function () {
  for (var cards = 1; cards <= 16 ; cards++ )
  var cardLoop = []
  while (cards.length < 8) {
-  var random =  Math.floor(Math.random() * 8)
+  var random =  Math.floor(Math.random() * 16)
   cardLoop.push(cards[random])
+  cardLoop.splice (random, 1)
+  return cardLoop
  }
 };
 
